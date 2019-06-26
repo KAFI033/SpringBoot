@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Information </title>
+</head>
+<body>
+	<div align="center">
+		<h1>Student Information</h1>
+		<a href="new">Create a new Batch Information</a>
+		<br><br>
+		<table border="1" cellpadding="15">
+			<thead>
+				<tr>
+					<th>Batch Id</th>
+					<th>Batch Name</th>
+					<th>Total Student</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="batch : ${listBatch}">
+					<td th:text="${batch.id}">Batch ID</td>
+					<td th:text="${batch.name}">Batch Name</td>
+					<td th:text="${batch.total_student}">Total Student</td>
+					<td>
+						<a th:href="@{'/edit/' + ${batch.id}}">Edit</a>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a th:href="@{'/delete/' + ${batch.id}}">Delete</a>	
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
