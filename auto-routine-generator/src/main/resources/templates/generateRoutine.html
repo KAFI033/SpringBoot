@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Generated Routine</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Generated Routine</h1>
+		<br><br>
+		<table border="1" cellpadding="15">
+			<thead>
+				<tr>
+					<th>Batch Name</th>
+					<th>Course Name</th>
+					<th>Day</th>
+					<th>Period</th>
+					<th>Room No</th>
+					<th>Teacher Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="routine : ${listRoutine}">
+					<td th:text="${routine.batchName}">Student ID</td>
+					<td th:text="${routine.courseName}">Course Name</td>
+					<td:block th:switch="${routine.day}">
+						<div th:case="'1'">
+							<td th:text="Saturday">Day</td>
+							
+						</div>
+						<div th:case="'2'">
+							<td th:text="Sunday">Day</td>
+						</div>
+							<div th:case="'3'">
+							<td th:text="Monday">Day</td>
+						</div>
+							<div th:case="'4'">
+							<td th:text="Tuesday">Day</td>
+						</div>
+						
+						<div th:case="'5'">
+							<td th:text="Wednesday">Day</td>
+						</div>
+							<div th:case="'6'">
+							<td th:text="Thursday">Day</td>
+						</div>
+							<div th:case="'7'">
+							<td th:text="Friday">Day</td>
+						</div>
+					</td:block>
+
+					<!-- <td th:text="${routine.day}">Day</td> -->
+					<td th:text="${routine.period}">Period</td>
+					<td th:text="${routine.room}">Room No</td>
+					<td th:text="${routine.teacherName}">Teacher Name</td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
