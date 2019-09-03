@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Naztech_login_register_module/.mvn/wrapper"/>
+	<classpathentry excluding="SpringBoot/controller/" kind="src" path="Naztech_login_register_module/src/main/java"/>
+	<classpathentry kind="src" path="Naztech_login_register_module/src/main/java/SpringBoot/controller"/>
+	<classpathentry kind="src" path="Naztech_login_register_module/src/test/java"/>
+	<classpathentry kind="output" path="Naztech_login_register_module/target/classes"/>
+</classpath>
